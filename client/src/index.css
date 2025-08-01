@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --background: hsl(39, 25%, 97%); /* #FAF0E6 linen */
+  --foreground: hsl(14, 20%, 18%); /* #3E2723 dark brown */
+  --muted: hsl(47, 43%, 85%); /* #D2B48C tan */
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%); /* #FFFFFF white */
+  --popover-foreground: hsl(14, 20%, 18%);
+  --card: hsl(0, 0%, 100%); /* #FFFFFF white */
+  --card-foreground: hsl(14, 20%, 18%);
+  --border: hsl(47, 43%, 85%);
+  --input: hsl(47, 43%, 85%);
+  --primary: hsl(20, 69%, 31%); /* #8B4513 saddle brown */
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(47, 43%, 85%); /* #D2B48C tan */
+  --secondary-foreground: hsl(14, 20%, 18%);
+  --accent: hsl(60, 56%, 91%); /* #F5F5DC beige */
+  --accent-foreground: hsl(14, 20%, 18%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 69%, 31%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(20, 69%, 31%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+}
