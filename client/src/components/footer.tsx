@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-display font-bold mb-4">AL Furniture</h3>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Menyediakan furnitur kayu berkualitas untuk sekolah sejak 2025. Kualitas, tradisi, dan keahlian dalam setiap produk.
+              Menyediakan furnitur kayu berkualitas sejak 2025. Dipercaya banyak sekolah dengan kualitas, tradisi, dan keahlian dalam setiap produk.
             </p>
           </div>
           <div>

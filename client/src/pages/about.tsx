@@ -9,13 +9,13 @@ const About = () => {
             <h2 className="text-5xl font-display font-bold text-primary mb-6">Cerita Kami</h2>
             <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
               <p>
-                Didirikan pada tahun 2025, AL Furniture dimulai sebagai workshop keluarga kecil dengan misi sederhana: menciptakan furnitur berkualitas yang tahan lama untuk mendukung dunia pendidikan.
+                Didirikan pada tahun 2025, AL Furniture dimulai sebagai workshop keluarga kecil dengan misi sederhana: menciptakan furnitur kayu berkualitas yang tahan lama untuk berbagai kebutuhan.
               </p>
               <p>
-                Berawal dari proyek passion oleh Agung dan Kholis, dua pria dengan kecintaan yang sama terhadap woodworking, kini telah berkembang menjadi nama terpercaya dalam furnitur handcrafted. Komitmen kami terhadap teknik tradisional, dikombinasikan dengan sensibilitas desain modern, memastikan setiap produk memiliki kualitas yang timeless dan kontemporer.
+                Berawal dari proyek passion oleh Agung dan Kholis, dua pria dengan kecintaan yang sama terhadap woodworking, kini telah berkembang menjadi nama terpercaya dalam furnitur handcrafted. Komitmen kami terhadap teknik tradisional, dikombinasikan dengan sensibilitas design modern, memastikan setiap produk memiliki kualitas yang timeless dan kontemporer.
               </p>
               <p>
-                Hari ini, kami terus melanjutkan tradisi keluarga dengan generasi selanjutnya yang bergabung dalam workshop kami, membawa ide-ide segar sambil mempertahankan dedikasi yang sama terhadap kualitas dan keahlian yang telah menjadi ciri khas kami selama bertahun-tahun. Fokus kami adalah menyediakan solusi furnitur terbaik untuk institusi pendidikan di seluruh Indonesia.
+                Hari ini, kami terus melanjutkan tradisi keluarga dengan generasi selanjutnya yang bergabung dalam workshop kami. Dengan pengalaman melayani berbagai klien, kami telah membangun reputasi kuat terutama di sektor pendidikan, dipercaya oleh banyak sekolah di seluruh Indonesia untuk menyediakan solusi furnitur berkualitas.
               </p>
             </div>
           </div>
@@ -84,17 +84,17 @@ const About = () => {
               {
                 step: "1",
                 title: "Konsultasi",
-                description: "Proses konsultasi kolaboratif untuk mewujudkan visi sekolah Anda"
+                description: "Proses konsultasi kolaboratif untuk mewujudkan visi furnitur Anda"
               },
               {
                 step: "2",
                 title: "Pemilihan Material",
-                description: "Memilih kayu yang sempurna untuk setiap proyek pendidikan"
+                description: "Memilih kayu yang sempurna untuk setiap proyek dengan standar kualitas tinggi"
               },
               {
                 step: "3",
                 title: "Pengerjaan",
-                description: "Pengerjaan handcrafted yang teliti menggunakan teknik tradisional"
+                description: "Pengerjaan handcrafted yang teliti menggunakan teknik tradisional teruji"
               },
               {
                 step: "4",

@@ -65,7 +65,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-5xl font-display font-bold text-primary mb-6">Hubungi Kami</h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            Siap diskusikan kebutuhan furnitur sekolah Anda? Kami ingin mendengar tentang proyek Anda dan bagaimana kami dapat mewujudkan visi tersebut.
+            Siap diskusikan kebutuhan furnitur Anda? Dengan pengalaman di berbagai proyek terutama sekolah, kami ingin mendengar tentang visi Anda.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ const Contact = () => {
                         <FormControl>
                           <Textarea
                             rows={6}
-                            placeholder="Ceritakan tentang proyek sekolah Anda, timeline yang diinginkan, dan kebutuhan spesifik lainnya..."
+                            placeholder="Ceritakan tentang proyek furnitur Anda, timeline yang diinginkan, dan kebutuhan spesifik lainnya..."
                             className="bg-background border-secondary/30 focus:border-primary resize-none"
                             {...field}
                           />

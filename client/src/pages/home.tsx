@@ -19,10 +19,10 @@ const Home = () => {
               AL Furniture
             </h1>
             <p className="text-xl lg:text-2xl text-foreground/80 mb-8 leading-relaxed font-medium">
-              Supplier furnitur kayu berkualitas untuk sekolah
+              Furnitur kayu berkualitas untuk berbagai kebutuhan
             </p>
             <p className="text-lg text-foreground/70 mb-12 max-w-lg leading-relaxed">
-              Temukan koleksi furnitur kayu yang dirancang khusus untuk kebutuhan pendidikan, menggabungkan kraftsmanship tradisional dengan desain modern.
+              Spesialis furnitur untuk institusi pendidikan dengan pengalaman melayani berbagai klien. Menggabungkan keahlian tradisional dengan desain modern yang fungsional.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/products">
@@ -55,7 +55,7 @@ const Home = () => {
               Mengapa Memilih AL Furniture
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Rasakan perbedaan kualitas keahlian autentik dan material berkelanjutan untuk sekolah Anda
+              Rasakan perbedaan kualitas keahlian autentik dan material berkelanjutan, dipercaya oleh banyak sekolah di Indonesia
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
@@ -86,10 +86,10 @@ const Home = () => {
                 <Heart className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                Fokus Pendidikan
+                Pengalaman Pendidikan
               </h3>
               <p className="text-foreground/70 leading-relaxed">
-                Spesialisasi dalam furnitur sekolah, memahami kebutuhan khusus lingkungan pendidikan dengan desain ergonomis dan tahan lama.
+                Berpengalaman melayani berbagai institusi pendidikan, memahami kebutuhan khusus lingkungan belajar dengan desain ergonomis dan tahan lama.
               </p>
             </div>
           </div>
