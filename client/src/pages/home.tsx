@@ -95,6 +95,42 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <section className="bg-background py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-primary mb-4">
+              Dipercaya Klien Kami
+            </h2>
+            <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto">
+              Testimoni dari berbagai klien yang telah mempercayakan kebutuhan furnitur mereka kepada kami
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-2xl p-6 sm:p-8 lg:p-12 shadow-lg text-center">
+              <blockquote className="text-lg sm:text-xl text-foreground/80 mb-6 italic leading-relaxed">
+                "Furnitur dari AL Furniture sangat kokoh dan estetik, cocok untuk suasana belajar. Kualitas kayu yang digunakan benar-benar premium dan desainnya sangat sesuai dengan kebutuhan sekolah kami."
+              </blockquote>
+              <cite className="text-primary font-semibold">
+                — Kepala Sekolah SD Nusa Bangsa, Jakarta
+              </cite>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8 sm:mt-12">
+            <Link href="/contact">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl"
+              >
+                Konsultasi Gratis
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

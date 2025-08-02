@@ -1,4 +1,7 @@
 import { Star, Recycle, Users } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 const About = () => {
   return (
@@ -111,6 +114,24 @@ const About = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-accent/20 rounded-2xl p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-display font-bold text-primary mb-4">
+            Mari Wujudkan Proyek Furnitur Anda
+          </h3>
+          <p className="text-base sm:text-lg text-foreground/70 mb-6 max-w-2xl mx-auto">
+            Dengan pengalaman dan dedikasi kami, mari ciptakan furnitur berkualitas untuk kebutuhan Anda
+          </p>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl"
+            >
+              Mulai Konsultasi
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
