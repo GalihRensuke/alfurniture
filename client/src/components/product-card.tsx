@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const formatPrice = (priceInCents: number) => {
-    return `$${(priceInCents / 100).toLocaleString()}`;
+    return `Rp ${priceInCents.toLocaleString('id-ID')}`;
   };
 
   return (
@@ -32,7 +32,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             {formatPrice(product.price)}
           </span>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            View Details
+            Lihat Detail
           </Button>
         </div>
       </CardContent>

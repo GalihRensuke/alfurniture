@@ -9,44 +9,44 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-display font-bold mb-4">AL Furniture</h3>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Handcrafting beautiful wooden furniture since 2000. Quality, tradition, and craftsmanship in every piece.
+              Menyediakan furnitur kayu berkualitas untuk sekolah sejak 2025. Kualitas, tradisi, dan keahlian dalam setiap produk.
             </p>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Menu Cepat</h4>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
                 <Link href="/">
-                  <a className="hover:text-primary-foreground transition-colors duration-200">
-                    Home
-                  </a>
+                  <span className="hover:text-primary-foreground transition-colors duration-200 cursor-pointer">
+                    Beranda
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/products">
-                  <a className="hover:text-primary-foreground transition-colors duration-200">
-                    Products
-                  </a>
+                  <span className="hover:text-primary-foreground transition-colors duration-200 cursor-pointer">
+                    Produk
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <a className="hover:text-primary-foreground transition-colors duration-200">
-                    About
-                  </a>
+                  <span className="hover:text-primary-foreground transition-colors duration-200 cursor-pointer">
+                    Tentang Kami
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <a className="hover:text-primary-foreground transition-colors duration-200">
-                    Contact
-                  </a>
+                  <span className="hover:text-primary-foreground transition-colors duration-200 cursor-pointer">
+                    Kontak
+                  </span>
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-4">Ikuti Kami</h4>
             <div className="flex space-x-4">
               <a
                 href="#"
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
-          <p>&copy; 2024 AL Furniture. All rights reserved. | Crafted with care by local artisans.</p>
+          <p>&copy; 2025 AL Furniture. Semua hak dilindungi. | Dibuat dengan cinta oleh pengrajin lokal.</p>
         </div>
       </div>
     </footer>

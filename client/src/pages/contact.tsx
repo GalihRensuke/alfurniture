@@ -13,9 +13,9 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string().min(2, "Nama harus minimal 2 karakter"),
+  email: z.string().email("Masukkan alamat email yang valid"),
+  message: z.string().min(10, "Pesan harus minimal 10 karakter"),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -40,16 +40,16 @@ const Contact = () => {
     },
     onSuccess: () => {
       toast({
-        title: "Message sent successfully!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
+        title: "Pesan berhasil dikirim!",
+        description: "Terima kasih telah menghubungi kami. Kami akan segera menghubungi Anda kembali.",
       });
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/contact"] });
     },
     onError: (error: any) => {
       toast({
-        title: "Failed to send message",
-        description: error.message || "Please try again later.",
+        title: "Gagal mengirim pesan",
+        description: error.message || "Silakan coba lagi nanti.",
         variant: "destructive",
       });
     },
@@ -63,9 +63,9 @@ const Contact = () => {
     <div className="bg-background py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-display font-bold text-primary mb-6">Get In Touch</h2>
+          <h2 className="text-5xl font-display font-bold text-primary mb-6">Hubungi Kami</h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            Ready to discuss your furniture needs? We'd love to hear about your project and how we can bring your vision to life.
+            Siap diskusikan kebutuhan furnitur sekolah Anda? Kami ingin mendengar tentang proyek Anda dan bagaimana kami dapat mewujudkan visi tersebut.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ const Contact = () => {
           <Card className="bg-card rounded-2xl shadow-lg">
             <CardContent className="p-8">
               <h3 className="text-2xl font-display font-semibold text-primary mb-6">
-                Send us a message
+                Kirim pesan kepada kami
               </h3>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -84,11 +84,11 @@ const Contact = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm font-semibold text-foreground">
-                          Name *
+                          Nama *
                         </FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Your full name"
+                            placeholder="Nama lengkap Anda"
                             className="bg-background border-secondary/30 focus:border-primary"
                             {...field}
                           />
@@ -108,7 +108,7 @@ const Contact = () => {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="your.email@example.com"
+                            placeholder="email.anda@example.com"
                             className="bg-background border-secondary/30 focus:border-primary"
                             {...field}
                           />
@@ -123,12 +123,12 @@ const Contact = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm font-semibold text-foreground">
-                          Message *
+                          Pesan *
                         </FormLabel>
                         <FormControl>
                           <Textarea
                             rows={6}
-                            placeholder="Tell us about your project, preferred timeline, and any specific requirements..."
+                            placeholder="Ceritakan tentang proyek sekolah Anda, timeline yang diinginkan, dan kebutuhan spesifik lainnya..."
                             className="bg-background border-secondary/30 focus:border-primary resize-none"
                             {...field}
                           />
@@ -142,7 +142,7 @@ const Contact = () => {
                     disabled={contactMutation.isPending}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 text-lg shadow-lg hover:shadow-xl"
                   >
-                    {contactMutation.isPending ? "Sending..." : "Send Message"}
+                    {contactMutation.isPending ? "Mengirim..." : "Kirim Pesan"}
                   </Button>
                 </form>
               </Form>
@@ -154,7 +154,7 @@ const Contact = () => {
             <Card className="bg-card rounded-2xl shadow-lg">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-display font-semibold text-primary mb-6">
-                  Visit Our Workshop
+                  Kunjungi Workshop Kami
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
@@ -162,10 +162,10 @@ const Contact = () => {
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Address</h4>
+                      <h4 className="font-semibold text-foreground">Alamat</h4>
                       <p className="text-foreground/70">
-                        123 Craftsman Lane<br />
-                        Artisan District, CA 90210
+                        Cilendek Timur<br />
+                        Kota Bogor
                       </p>
                     </div>
                   </div>
@@ -174,8 +174,8 @@ const Contact = () => {
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Phone</h4>
-                      <p className="text-foreground/70">(555) 123-4567</p>
+                      <h4 className="font-semibold text-foreground">Telepon</h4>
+                      <p className="text-foreground/70">+62 877-8241-4638</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -194,24 +194,24 @@ const Contact = () => {
             <Card className="bg-card rounded-2xl shadow-lg">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                  Workshop Hours
+                  Jam Operasional Workshop
                 </h3>
                 <div className="space-y-2 text-foreground/70">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-semibold">8:00 AM - 6:00 PM</span>
+                    <span>Senin - Jumat</span>
+                    <span className="font-semibold">08:00 - 18:00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-semibold">9:00 AM - 4:00 PM</span>
+                    <span>Sabtu</span>
+                    <span className="font-semibold">09:00 - 16:00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-semibold">Closed</span>
+                    <span>Minggu</span>
+                    <span className="font-semibold">Tutup</span>
                   </div>
                 </div>
                 <p className="text-sm text-foreground/60 mt-4">
-                  *Appointments recommended for consultations
+                  *Janji temu disarankan untuk konsultasi
                 </p>
               </CardContent>
             </Card>
@@ -225,10 +225,10 @@ const Contact = () => {
               />
               <CardContent className="p-6">
                 <h4 className="font-display font-semibold text-primary mb-2">
-                  Visit Our Workshop
+                  Kunjungi Workshop Kami
                 </h4>
                 <p className="text-foreground/70 text-sm">
-                  See our craftsmen at work and explore our collection in person
+                  Lihat para pengrajin kami bekerja dan jelajahi koleksi secara langsung
                 </p>
               </CardContent>
             </Card>

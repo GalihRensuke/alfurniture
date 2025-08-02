@@ -1,12 +1,17 @@
-# AL Furniture - Handcrafted Furniture Showcase
+# AL Furniture - Supplier Furnitur Sekolah
 
 ## Overview
 
-AL Furniture is a full-stack web application showcasing handcrafted wooden furniture. The application features a modern React frontend with a Node.js/Express backend, designed to display furniture products and handle customer inquiries. Built with TypeScript throughout, it emphasizes clean design, user experience, and maintainable code architecture.
+AL Furniture adalah aplikasi web full-stack yang menampilkan furnitur kayu berkualitas untuk kebutuhan sekolah. Aplikasi ini menampilkan frontend React modern dengan backend Node.js/Express, dirancang untuk menampilkan produk furnitur pendidikan dan menangani pertanyaan pelanggan. Dibangun dengan TypeScript secara menyeluruh, menekankan desain yang bersih, pengalaman pengguna, dan arsitektur kode yang dapat dipelihara.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+- Language: Indonesian (Bahasa Indonesia)
+- Focus: School furniture supply and educational institutions
+- Founded: 2025 by Agung and Kholis
+- Location: Cilendek Timur, Kota Bogor
+- Contact: +62 877-8241-4638, info@alfurniture.com
 
 ## System Architecture
 

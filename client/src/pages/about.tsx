@@ -6,16 +6,16 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
-            <h2 className="text-5xl font-display font-bold text-primary mb-6">Our Story</h2>
+            <h2 className="text-5xl font-display font-bold text-primary mb-6">Cerita Kami</h2>
             <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
               <p>
-                Founded in 2000, AL Furniture began as a small family workshop with a simple mission: to create beautiful, lasting furniture that brings warmth and character to every home.
+                Didirikan pada tahun 2025, AL Furniture dimulai sebagai workshop keluarga kecil dengan misi sederhana: menciptakan furnitur berkualitas yang tahan lama untuk mendukung dunia pendidikan.
               </p>
               <p>
-                What started as a passion project by Antonio and Luigi, two brothers with a shared love for woodworking, has grown into a respected name in handcrafted furniture. Our commitment to traditional techniques, combined with modern design sensibilities, ensures each piece is both timeless and contemporary.
+                Berawal dari proyek passion oleh Agung dan Kholis, dua pria dengan kecintaan yang sama terhadap woodworking, kini telah berkembang menjadi nama terpercaya dalam furnitur handcrafted. Komitmen kami terhadap teknik tradisional, dikombinasikan dengan sensibilitas desain modern, memastikan setiap produk memiliki kualitas yang timeless dan kontemporer.
               </p>
               <p>
-                Today, we continue the family tradition with the next generation joining our workshop, bringing fresh ideas while maintaining the same dedication to quality and craftsmanship that has defined us for over two decades.
+                Hari ini, kami terus melanjutkan tradisi keluarga dengan generasi selanjutnya yang bergabung dalam workshop kami, membawa ide-ide segar sambil mempertahankan dedikasi yang sama terhadap kualitas dan keahlian yang telah menjadi ciri khas kami selama bertahun-tahun. Fokus kami adalah menyediakan solusi furnitur terbaik untuk institusi pendidikan di seluruh Indonesia.
               </p>
             </div>
           </div>
@@ -26,8 +26,8 @@ const About = () => {
               className="rounded-2xl shadow-xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
-              <p className="text-2xl font-display font-bold">24+</p>
-              <p className="font-semibold">Years of Craftsmanship</p>
+              <p className="text-2xl font-display font-bold">2025</p>
+              <p className="font-semibold">Tahun Pendirian</p>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@ const About = () => {
         {/* Values Section */}
         <div className="bg-background rounded-2xl p-12 mb-20">
           <h3 className="text-3xl font-display font-bold text-primary text-center mb-12">
-            Our Values
+            Nilai-Nilai Kami
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -43,10 +43,10 @@ const About = () => {
                 <Star className="h-6 w-6 text-primary" />
               </div>
               <h4 className="text-xl font-display font-semibold text-primary mb-3">
-                Quality First
+                Kualitas Utama
               </h4>
               <p className="text-foreground/70">
-                We never compromise on quality, using only the finest materials and time-tested techniques.
+                Kami tidak pernah berkompromi pada kualitas, menggunakan hanya material terbaik dan teknik yang teruji waktu.
               </p>
             </div>
             <div className="text-center">
@@ -54,10 +54,10 @@ const About = () => {
                 <Recycle className="h-6 w-6 text-primary" />
               </div>
               <h4 className="text-xl font-display font-semibold text-primary mb-3">
-                Sustainability
+                Keberlanjutan
               </h4>
               <p className="text-foreground/70">
-                Committed to responsible sourcing and eco-friendly practices in all our operations.
+                Berkomitmen pada sourcing yang bertanggung jawab dan praktik ramah lingkungan dalam semua operasi kami.
               </p>
             </div>
             <div className="text-center">
@@ -65,10 +65,10 @@ const About = () => {
                 <Users className="h-6 w-6 text-primary" />
               </div>
               <h4 className="text-xl font-display font-semibold text-primary mb-3">
-                Family Tradition
+                Tradisi Keluarga
               </h4>
               <p className="text-foreground/70">
-                Preserving traditional craftsmanship while embracing innovation for future generations.
+                Melestarikan keahlian tradisional sambil merangkul inovasi untuk generasi mendatang.
               </p>
             </div>
           </div>
@@ -77,29 +77,29 @@ const About = () => {
         {/* Process Section */}
         <div>
           <h3 className="text-3xl font-display font-bold text-primary text-center mb-12">
-            Our Process
+            Proses Kami
           </h3>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
                 step: "1",
-                title: "Design",
-                description: "Collaborative design process to bring your vision to life"
+                title: "Konsultasi",
+                description: "Proses konsultasi kolaboratif untuk mewujudkan visi sekolah Anda"
               },
               {
                 step: "2",
-                title: "Material Selection",
-                description: "Carefully choosing the perfect wood for each project"
+                title: "Pemilihan Material",
+                description: "Memilih kayu yang sempurna untuk setiap proyek pendidikan"
               },
               {
                 step: "3",
-                title: "Crafting",
-                description: "Meticulous handcrafting using traditional techniques"
+                title: "Pengerjaan",
+                description: "Pengerjaan handcrafted yang teliti menggunakan teknik tradisional"
               },
               {
                 step: "4",
                 title: "Finishing",
-                description: "Final touches and quality inspection before delivery"
+                description: "Sentuhan akhir dan inspeksi kualitas sebelum pengiriman"
               }
             ].map((item) => (
               <div key={item.step} className="text-center">

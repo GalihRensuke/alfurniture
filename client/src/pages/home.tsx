@@ -19,10 +19,10 @@ const Home = () => {
               AL Furniture
             </h1>
             <p className="text-xl lg:text-2xl text-foreground/80 mb-8 leading-relaxed font-medium">
-              Handcrafted wooden furniture from local artisans
+              Supplier furnitur kayu berkualitas untuk sekolah
             </p>
             <p className="text-lg text-foreground/70 mb-12 max-w-lg leading-relaxed">
-              Discover our collection of meticulously crafted wooden furniture, where traditional craftsmanship meets modern design.
+              Temukan koleksi furnitur kayu yang dirancang khusus untuk kebutuhan pendidikan, menggabungkan kraftsmanship tradisional dengan desain modern.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/products">
@@ -30,7 +30,7 @@ const Home = () => {
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg shadow-lg hover:shadow-xl"
                 >
-                  Explore Products
+                  Jelajahi Produk
                 </Button>
               </Link>
               <Link href="/about">
@@ -39,7 +39,7 @@ const Home = () => {
                   size="lg"
                   className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 text-lg"
                 >
-                  Our Story
+                  Cerita Kami
                 </Button>
               </Link>
             </div>
@@ -52,10 +52,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold text-primary mb-4">
-              Why Choose AL Furniture
+              Mengapa Memilih AL Furniture
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Experience the difference of authentic craftsmanship and sustainable materials
+              Rasakan perbedaan kualitas keahlian autentik dan material berkelanjutan untuk sekolah Anda
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
@@ -64,10 +64,10 @@ const Home = () => {
                 <Hammer className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                Handcrafted Quality
+                Kualitas Handmade
               </h3>
               <p className="text-foreground/70 leading-relaxed">
-                Every piece is meticulously crafted by skilled artisans using traditional techniques passed down through generations.
+                Setiap produk dibuat dengan teliti oleh pengrajin ahli menggunakan teknik tradisional yang diwariskan turun-temurun.
               </p>
             </div>
             <div className="text-center">
@@ -75,10 +75,10 @@ const Home = () => {
                 <Leaf className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                Sustainable Materials
+                Material Berkelanjutan
               </h3>
               <p className="text-foreground/70 leading-relaxed">
-                We source our wood responsibly from certified sustainable forests, ensuring environmental responsibility.
+                Kami menggunakan kayu berkualitas dari hutan berkelanjutan bersertifikat, memastikan tanggung jawab lingkungan.
               </p>
             </div>
             <div className="text-center">
@@ -86,10 +86,10 @@ const Home = () => {
                 <Heart className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-display font-semibold text-primary mb-4">
-                Family Legacy
+                Fokus Pendidikan
               </h3>
               <p className="text-foreground/70 leading-relaxed">
-                Over 20 years of family tradition, bringing passion and expertise to every piece we create.
+                Spesialisasi dalam furnitur sekolah, memahami kebutuhan khusus lingkungan pendidikan dengan desain ergonomis dan tahan lama.
               </p>
             </div>
           </div>

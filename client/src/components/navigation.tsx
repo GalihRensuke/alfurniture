@@ -8,10 +8,10 @@ const Navigation = () => {
   const [location] = useLocation();
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/products", label: "Products" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Beranda" },
+    { href: "/products", label: "Produk" },
+    { href: "/about", label: "Tentang Kami" },
+    { href: "/contact", label: "Kontak" },
   ];
 
   const toggleMobileMenu = () => {
@@ -39,15 +39,15 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
-                  <a
-                    className={`font-medium transition-colors duration-200 ${
+                  <span
+                    className={`font-medium transition-colors duration-200 cursor-pointer ${
                       location === item.href
                         ? "text-primary font-bold"
                         : "text-foreground hover:text-primary"
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
             </div>
@@ -77,16 +77,16 @@ const Navigation = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
-                <a
+                <span
                   onClick={closeMobileMenu}
-                  className={`block px-3 py-2 font-medium transition-colors duration-200 ${
+                  className={`block px-3 py-2 font-medium transition-colors duration-200 cursor-pointer ${
                     location === item.href
                       ? "text-primary font-bold"
                       : "text-foreground hover:text-primary"
                   }`}
                 >
                   {item.label}
-                </a>
+                </span>
               </Link>
             ))}
           </div>
