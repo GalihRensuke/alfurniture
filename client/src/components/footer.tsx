@@ -3,18 +3,18 @@ import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
+    <footer className="bg-primary text-primary-foreground py-8 sm:py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <h3 className="text-2xl font-display font-bold mb-4">AL Furniture</h3>
-            <p className="text-primary-foreground/80 leading-relaxed">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
+          <div className="sm:col-span-2 md:col-span-1">
+            <h3 className="text-xl sm:text-2xl font-display font-bold mb-3 sm:mb-4">AL Furniture</h3>
+            <p className="text-sm sm:text-base text-primary-foreground/80 leading-relaxed">
               Menyediakan furnitur kayu berkualitas sejak 2025. Dipercaya banyak sekolah dengan kualitas, tradisi, dan keahlian dalam setiap produk.
             </p>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Menu Cepat</h4>
-            <ul className="space-y-2 text-primary-foreground/80">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Menu Cepat</h4>
+            <ul className="space-y-2 text-sm sm:text-base text-primary-foreground/80">
               <li>
                 <Link href="/">
                   <span className="hover:text-primary-foreground transition-colors duration-200 cursor-pointer">

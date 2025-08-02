@@ -28,7 +28,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/">
-              <h1 className="text-2xl font-display font-bold text-primary cursor-pointer">
+              <h1 className="text-xl sm:text-2xl font-display font-bold text-primary cursor-pointer">
                 AL Furniture
               </h1>
             </Link>
@@ -74,7 +74,7 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-card border-t border-border">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 max-h-[80vh] overflow-y-auto">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
                 <span

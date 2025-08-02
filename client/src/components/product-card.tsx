@@ -12,26 +12,26 @@ const ProductCard = ({ product }: ProductCardProps) => {
   };
 
   return (
-    <Card className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+    <Card className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group touch-manipulation">
       <div className="relative overflow-hidden">
         <img
           src={product.imageUrl}
           alt={product.name}
-          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-48 sm:h-56 lg:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
-      <CardContent className="p-6">
-        <h3 className="text-2xl font-display font-semibold text-primary mb-3">
+      <CardContent className="p-4 sm:p-6">
+        <h3 className="text-xl sm:text-2xl font-display font-semibold text-primary mb-2 sm:mb-3">
           {product.name}
         </h3>
-        <p className="text-foreground/70 mb-4 leading-relaxed">
+        <p className="text-sm sm:text-base text-foreground/70 mb-4 leading-relaxed line-clamp-3">
           {product.description}
         </p>
-        <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold text-primary">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+          <span className="text-xl sm:text-2xl font-bold text-primary">
             {formatPrice(product.price)}
           </span>
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base px-4 py-2">
             Lihat Detail
           </Button>
         </div>

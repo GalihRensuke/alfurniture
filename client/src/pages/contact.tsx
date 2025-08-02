@@ -60,19 +60,19 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-background py-20">
+    <div className="bg-background py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-display font-bold text-primary mb-6">Hubungi Kami</h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-primary mb-4 sm:mb-6">Hubungi Kami</h2>
+          <p className="text-base sm:text-lg lg:text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed px-4">
             Siap diskusikan kebutuhan furnitur Anda? Dengan pengalaman di berbagai proyek terutama sekolah, kami ingin mendengar tentang visi Anda.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Contact Form */}
           <Card className="bg-card rounded-2xl shadow-lg">
-            <CardContent className="p-8">
+            <CardContent className="p-6 sm:p-8">
               <h3 className="text-2xl font-display font-semibold text-primary mb-6">
                 Kirim pesan kepada kami
               </h3>
@@ -150,9 +150,9 @@ const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <Card className="bg-card rounded-2xl shadow-lg">
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <h3 className="text-2xl font-display font-semibold text-primary mb-6">
                   Kunjungi Workshop Kami
                 </h3>

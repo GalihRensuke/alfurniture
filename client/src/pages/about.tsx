@@ -2,11 +2,11 @@ import { Star, Recycle, Users } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="bg-card py-20">
+    <div className="bg-card py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16 lg:mb-20">
           <div>
-            <h2 className="text-5xl font-display font-bold text-primary mb-6">Cerita Kami</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-primary mb-4 sm:mb-6">Cerita Kami</h2>
             <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
               <p>
                 Didirikan pada tahun 2025, AL Furniture dimulai sebagai workshop keluarga kecil dengan misi sederhana: menciptakan furnitur kayu berkualitas yang tahan lama untuk berbagai kebutuhan.
@@ -33,11 +33,11 @@ const About = () => {
         </div>
 
         {/* Values Section */}
-        <div className="bg-background rounded-2xl p-12 mb-20">
-          <h3 className="text-3xl font-display font-bold text-primary text-center mb-12">
+        <div className="bg-background rounded-2xl p-6 sm:p-8 lg:p-12 mb-12 sm:mb-16 lg:mb-20">
+          <h3 className="text-2xl sm:text-3xl font-display font-bold text-primary text-center mb-8 sm:mb-12">
             Nilai-Nilai Kami
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="bg-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Star className="h-6 w-6 text-primary" />
