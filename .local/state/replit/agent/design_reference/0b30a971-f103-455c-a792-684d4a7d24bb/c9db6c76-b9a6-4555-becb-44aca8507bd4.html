@@ -1,0 +1,545 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL Furniture - Handcrafted Wooden Furniture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D2B48C',
+                        accent: '#F5F5DC',
+                        background: '#FAF0E6',
+                        textDark: '#3E2723',
+                        neutral: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-body bg-background text-textDark">
+    <!-- @COMPONENT: Navigation -->
+    <nav class="bg-neutral shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-display font-bold text-primary">AL Furniture</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-textDark hover:text-primary font-medium transition-colors duration-200" data-event="click:navigateToHome">Home</a>
+                        <a href="#products" class="nav-link text-textDark hover:text-primary font-medium transition-colors duration-200" data-event="click:navigateToProducts">Products</a>
+                        <a href="#about" class="nav-link text-textDark hover:text-primary font-medium transition-colors duration-200" data-event="click:navigateToAbout">About</a>
+                        <a href="#contact" class="nav-link text-textDark hover:text-primary font-medium transition-colors duration-200" data-event="click:navigateToContact">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-button text-textDark hover:text-primary focus:outline-none focus:text-primary" data-event="click:toggleMobileMenu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-neutral border-t border-secondary/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-textDark hover:text-primary font-medium transition-colors duration-200" data-event="click:navigateToHome">Home</a>
+                <a href="#products" class="block px-3 py-2 text-textDark hover:text-primary font-medium transition-colors duration-200" data-event="click:navigateToProducts">Products</a>
+                <a href="#about" class="block px-3 py-2 text-textDark hover:text-primary font-medium transition-colors duration-200" data-event="click:navigateToAbout">About</a>
+                <a href="#contact" class="block px-3 py-2 text-textDark hover:text-primary font-medium transition-colors duration-200" data-event="click:navigateToContact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: HomePage -->
+    <section id="home" class="page-section">
+        <!-- Hero Section -->
+        <div class="relative bg-gradient-to-r from-primary/10 to-secondary/10 min-h-screen flex items-center">
+            <!-- Beautiful wooden workshop background -->
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+                <div class="text-center lg:text-left lg:max-w-2xl">
+                    <h1 class="text-5xl lg:text-7xl font-display font-bold text-primary mb-6 leading-tight">
+                        AL Furniture
+                    </h1>
+                    <p class="text-xl lg:text-2xl text-textDark/80 mb-8 leading-relaxed font-medium">
+                        Handcrafted wooden furniture from local artisans
+                    </p>
+                    <p class="text-lg text-textDark/70 mb-12 max-w-lg leading-relaxed">
+                        Discover our collection of meticulously crafted wooden furniture, where traditional craftsmanship meets modern design.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary hover:bg-primary/90 text-neutral px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl" data-event="click:scrollToProducts">
+                            Explore Products
+                        </button>
+                        <button class="border-2 border-primary text-primary hover:bg-primary hover:text-neutral px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200" data-event="click:scrollToAbout">
+                            Our Story
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="bg-neutral py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-display font-bold text-primary mb-4">Why Choose AL Furniture</h2>
+                    <p class="text-lg text-textDark/70 max-w-2xl mx-auto">Experience the difference of authentic craftsmanship and sustainable materials</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center">
+                        <div class="bg-accent rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-hammer text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-primary mb-4">Handcrafted Quality</h3>
+                        <p class="text-textDark/70 leading-relaxed">Every piece is meticulously crafted by skilled artisans using traditional techniques passed down through generations.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-accent rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-leaf text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-primary mb-4">Sustainable Materials</h3>
+                        <p class="text-textDark/70 leading-relaxed">We source our wood responsibly from certified sustainable forests, ensuring environmental responsibility.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-accent rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-heart text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-display font-semibold text-primary mb-4">Family Legacy</h3>
+                        <p class="text-textDark/70 leading-relaxed">Over 20 years of family tradition, bringing passion and expertise to every piece we create.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HomePage -->
+
+    <!-- @COMPONENT: ProductsPage -->
+    <section id="products" class="page-section hidden bg-background py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-display font-bold text-primary mb-6">Our Products</h2>
+                <p class="text-xl text-textDark/70 max-w-3xl mx-auto leading-relaxed">
+                    Discover our carefully curated collection of handcrafted wooden furniture, each piece telling its own story of craftsmanship and quality.
+                </p>
+            </div>
+
+            <!-- @MAP: products.map(product => ( -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Product 1: Dining Table -->
+                <div class="product-card bg-neutral rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group" data-mock="true">
+                    <!-- Elegant wooden dining table with natural grain -->
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Handcrafted Oak Dining Table" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-semibold text-primary mb-3" data-bind="product.name">Rustic Oak Dining Table</h3>
+                        <p class="text-textDark/70 mb-4 leading-relaxed" data-bind="product.description">A stunning centerpiece crafted from solid oak with beautiful natural grain patterns. Perfect for family gatherings and special occasions.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary" data-bind="product.price">$1,299</span>
+                            <button class="bg-primary hover:bg-primary/90 text-neutral px-6 py-2 rounded-lg font-semibold transition-colors duration-200" data-event="click:viewProduct">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Armchair -->
+                <div class="product-card bg-neutral rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group" data-mock="true">
+                    <!-- Comfortable wooden armchair with cushions -->
+                    <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Handcrafted Walnut Armchair" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-semibold text-primary mb-3" data-bind="product.name">Classic Walnut Armchair</h3>
+                        <p class="text-textDark/70 mb-4 leading-relaxed" data-bind="product.description">Elegant armchair featuring rich walnut wood and ergonomic design. Upholstered with premium fabric for ultimate comfort.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary" data-bind="product.price">$899</span>
+                            <button class="bg-primary hover:bg-primary/90 text-neutral px-6 py-2 rounded-lg font-semibold transition-colors duration-200" data-event="click:viewProduct">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Bookshelf -->
+                <div class="product-card bg-neutral rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group" data-mock="true">
+                    <!-- Modern wooden bookshelf with clean lines -->
+                    <img src="https://pixabay.com/get/g19d6f79df21667d0e76f99e9831766a610a06d55f7175cdc21db276bd12a1264e461b543a48bad0456ec7c2f7e793ad0c42a3ae268d8f15b6e769453a69b02a5_1280.jpg" alt="Handcrafted Pine Bookshelf" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-semibold text-primary mb-3" data-bind="product.name">Modern Pine Bookshelf</h3>
+                        <p class="text-textDark/70 mb-4 leading-relaxed" data-bind="product.description">Sleek bookshelf with clean lines and ample storage. Crafted from sustainable pine with a natural finish that highlights the wood grain.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary" data-bind="product.price">$549</span>
+                            <button class="bg-primary hover:bg-primary/90 text-neutral px-6 py-2 rounded-lg font-semibold transition-colors duration-200" data-event="click:viewProduct">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Coffee Table -->
+                <div class="product-card bg-neutral rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group" data-mock="true">
+                    <!-- Rustic wooden coffee table with live edge -->
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Live Edge Maple Coffee Table" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-semibold text-primary mb-3" data-bind="product.name">Live Edge Maple Coffee Table</h3>
+                        <p class="text-textDark/70 mb-4 leading-relaxed" data-bind="product.description">Unique coffee table featuring a live edge maple slab with metal hairpin legs. Each piece is one-of-a-kind with natural edge variations.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary" data-bind="product.price">$749</span>
+                            <button class="bg-primary hover:bg-primary/90 text-neutral px-6 py-2 rounded-lg font-semibold transition-colors duration-200" data-event="click:viewProduct">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Kitchen Cabinet -->
+                <div class="product-card bg-neutral rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group" data-mock="true">
+                    <!-- Custom wooden kitchen cabinet with traditional design -->
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Custom Cherry Kitchen Cabinet" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-semibold text-primary mb-3" data-bind="product.name">Custom Cherry Kitchen Cabinet</h3>
+                        <p class="text-textDark/70 mb-4 leading-relaxed" data-bind="product.description">Handcrafted kitchen cabinet in rich cherry wood with soft-close hinges and adjustable shelving. Custom sizing available.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary" data-bind="product.price">$1,899</span>
+                            <button class="bg-primary hover:bg-primary/90 text-neutral px-6 py-2 rounded-lg font-semibold transition-colors duration-200" data-event="click:viewProduct">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Bed Frame -->
+                <div class="product-card bg-neutral rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group" data-mock="true">
+                    <!-- Elegant wooden bed frame with headboard -->
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Platform Ash Bed Frame" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true" />
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-semibold text-primary mb-3" data-bind="product.name">Platform Ash Bed Frame</h3>
+                        <p class="text-textDark/70 mb-4 leading-relaxed" data-bind="product.description">Minimalist platform bed frame crafted from sustainable ash wood. Features integrated nightstands and a low-profile design.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary" data-bind="product.price">$1,599</span>
+                            <button class="bg-primary hover:bg-primary/90 text-neutral px-6 py-2 rounded-lg font-semibold transition-colors duration-200" data-event="click:viewProduct">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+
+            <!-- Call to Action -->
+            <div class="text-center bg-neutral rounded-2xl p-12 shadow-lg">
+                <h3 class="text-3xl font-display font-bold text-primary mb-4">Custom Orders Welcome</h3>
+                <p class="text-lg text-textDark/70 mb-6 max-w-2xl mx-auto">Have a specific design in mind? We'd love to bring your vision to life with our custom furniture services.</p>
+                <button class="bg-primary hover:bg-primary/90 text-neutral px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200" data-event="click:scrollToContact">Get Custom Quote</button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ProductsPage -->
+
+    <!-- @COMPONENT: AboutPage -->
+    <section id="about" class="page-section hidden bg-neutral py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <h2 class="text-5xl font-display font-bold text-primary mb-6">Our Story</h2>
+                    <div class="space-y-6 text-lg text-textDark/80 leading-relaxed">
+                        <p>Founded in 2000, AL Furniture began as a small family workshop with a simple mission: to create beautiful, lasting furniture that brings warmth and character to every home.</p>
+                        <p>What started as a passion project by Antonio and Luigi, two brothers with a shared love for woodworking, has grown into a respected name in handcrafted furniture. Our commitment to traditional techniques, combined with modern design sensibilities, ensures each piece is both timeless and contemporary.</p>
+                        <p>Today, we continue the family tradition with the next generation joining our workshop, bringing fresh ideas while maintaining the same dedication to quality and craftsmanship that has defined us for over two decades.</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Artisan working in a traditional woodworking workshop -->
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Artisan crafting furniture in our workshop" class="rounded-2xl shadow-xl" />
+                    <div class="absolute -bottom-6 -left-6 bg-primary text-neutral p-6 rounded-xl shadow-lg">
+                        <p class="text-2xl font-display font-bold">23+</p>
+                        <p class="font-semibold">Years of Craftsmanship</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="bg-background rounded-2xl p-12">
+                <h3 class="text-3xl font-display font-bold text-primary text-center mb-12">Our Values</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-star text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-display font-semibold text-primary mb-3">Quality First</h4>
+                        <p class="text-textDark/70">We never compromise on quality, using only the finest materials and time-tested techniques.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-recycle text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-display font-semibold text-primary mb-3">Sustainability</h4>
+                        <p class="text-textDark/70">Committed to responsible sourcing and eco-friendly practices in all our operations.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-primary text-xl"></i>
+                        </div>
+                        <h4 class="text-xl font-display font-semibold text-primary mb-3">Family Tradition</h4>
+                        <p class="text-textDark/70">Preserving traditional craftsmanship while embracing innovation for future generations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="mt-20">
+                <h3 class="text-3xl font-display font-bold text-primary text-center mb-12">Our Process</h3>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="bg-primary text-neutral rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                        <h4 class="text-lg font-semibold text-primary mb-2">Design</h4>
+                        <p class="text-textDark/70 text-sm">Collaborative design process to bring your vision to life</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-primary text-neutral rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                        <h4 class="text-lg font-semibold text-primary mb-2">Material Selection</h4>
+                        <p class="text-textDark/70 text-sm">Carefully choosing the perfect wood for each project</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-primary text-neutral rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                        <h4 class="text-lg font-semibold text-primary mb-2">Crafting</h4>
+                        <p class="text-textDark/70 text-sm">Meticulous handcrafting using traditional techniques</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-primary text-neutral rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+                        <h4 class="text-lg font-semibold text-primary mb-2">Finishing</h4>
+                        <p class="text-textDark/70 text-sm">Final touches and quality inspection before delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutPage -->
+
+    <!-- @COMPONENT: ContactPage -->
+    <section id="contact" class="page-section hidden bg-background py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-display font-bold text-primary mb-6">Get In Touch</h2>
+                <p class="text-xl text-textDark/70 max-w-3xl mx-auto leading-relaxed">
+                    Ready to discuss your furniture needs? We'd love to hear about your project and how we can bring your vision to life.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <!-- @STATE: formData: {name: string, email: string, message: string} -->
+                <div class="bg-neutral rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-display font-semibold text-primary mb-6">Send us a message</h3>
+                    <form class="space-y-6" data-implementation="Form should validate inputs and handle submission">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-textDark mb-2">Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-secondary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors duration-200 bg-background"
+                                   placeholder="Your full name" data-bind="formData.name" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-textDark mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-secondary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors duration-200 bg-background"
+                                   placeholder="your.email@example.com" data-bind="formData.email" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-textDark mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="6" required 
+                                      class="w-full px-4 py-3 border border-secondary/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors duration-200 bg-background resize-none"
+                                      placeholder="Tell us about your project, preferred timeline, and any specific requirements..." data-bind="formData.message"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-primary hover:bg-primary/90 text-neutral font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg shadow-lg hover:shadow-xl"
+                                data-event="click:handleFormSubmit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-neutral rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-display font-semibold text-primary mb-6">Visit Our Workshop</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-accent rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-textDark">Address</h4>
+                                    <p class="text-textDark/70" data-mock="true">123 Craftsman Lane<br>Artisan District, CA 90210</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-accent rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-textDark">Phone</h4>
+                                    <p class="text-textDark/70" data-mock="true">(555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-accent rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-textDark">Email</h4>
+                                    <p class="text-textDark/70" data-mock="true">info@alfurniture.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-neutral rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-display font-semibold text-primary mb-4">Workshop Hours</h3>
+                        <div class="space-y-2 text-textDark/70">
+                            <div class="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span class="font-semibold">8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Saturday</span>
+                                <span class="font-semibold">9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday</span>
+                                <span class="font-semibold">Closed</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-textDark/60 mt-4">*Appointments recommended for consultations</p>
+                    </div>
+
+                    <!-- Workshop Image -->
+                    <div class="bg-neutral rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Traditional woodworking workshop with tools and wood -->
+                        <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="AL Furniture workshop interior" class="w-full h-48 object-cover" />
+                        <div class="p-6">
+                            <h4 class="font-display font-semibold text-primary mb-2">Visit Our Workshop</h4>
+                            <p class="text-textDark/70 text-sm">See our craftsmen at work and explore our collection in person</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactPage -->
+
+    <!-- Footer -->
+    <footer class="bg-primary text-neutral py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-display font-bold mb-4">AL Furniture</h3>
+                    <p class="text-neutral/80 leading-relaxed">Handcrafting beautiful wooden furniture since 2000. Quality, tradition, and craftsmanship in every piece.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-neutral/80">
+                        <li><a href="#home" class="hover:text-neutral transition-colors duration-200" data-event="click:navigateToHome">Home</a></li>
+                        <li><a href="#products" class="hover:text-neutral transition-colors duration-200" data-event="click:navigateToProducts">Products</a></li>
+                        <li><a href="#about" class="hover:text-neutral transition-colors duration-200" data-event="click:navigateToAbout">About</a></li>
+                        <li><a href="#contact" class="hover:text-neutral transition-colors duration-200" data-event="click:navigateToContact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-neutral/20 hover:bg-neutral/30 text-neutral w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-neutral/20 hover:bg-neutral/30 text-neutral w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-neutral/20 hover:bg-neutral/30 text-neutral w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-neutral/20 pt-8 text-center text-neutral/60">
+                <p>&copy; 2024 AL Furniture. All rights reserved. | Crafted with care by local artisans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // TODO: Implement React Router or similar navigation library for actual implementation
+            
+            // Simple page navigation simulation
+            const navLinks = document.querySelectorAll('.nav-link, a[href^="#"]');
+            const pages = document.querySelectorAll('.page-section');
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            // Navigation handler
+            function showPage(targetId) {
+                // Hide all pages
+                pages.forEach(page => page.classList.add('hidden'));
+                
+                // Show target page
+                const targetPage = document.querySelector(targetId);
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                }
+
+                // Update active nav link
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary', 'font-bold');
+                    link.classList.add('text-textDark');
+                });
+                
+                const activeLink = document.querySelector(`a[href="${targetId}"]`);
+                if (activeLink) {
+                    activeLink.classList.remove('text-textDark');
+                    activeLink.classList.add('text-primary', 'font-bold');
+                }
+
+                // Close mobile menu if open
+                if (mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+
+            // Add click handlers to navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    if (targetId && targetId.startsWith('#')) {
+                        showPage(targetId);
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Initialize with home page
+            showPage('#home');
+
+            // TODO: Implement form validation and submission
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // TODO: Implement actual form submission logic
+                    alert('Thank you for your message! We\'ll get back to you soon.');
+                });
+            }
+
+            // TODO: Implement smooth scrolling and other interactions
+            // TODO: Add loading states for product images
+            // TODO: Implement product detail modals or pages
+            // TODO: Add shopping cart functionality if needed
+        })();
+    </script>
+</body>
+</html>
