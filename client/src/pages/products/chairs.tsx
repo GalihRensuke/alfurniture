@@ -1,44 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import ProductCard from "@/components/product-card";
+import { getProductsByCategory } from "@/lib/mockData";
 import type { Product } from "@shared/schema";
 
 const Chairs = () => {
-  const { data: products, isLoading, error } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
-  });
-
   // Filter for chair products
-  const chairs = products?.filter(product => 
-    product.name.toLowerCase().includes('kursi') || 
-    product.category?.toLowerCase().includes('chair')
-  );
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-lg text-foreground/70">Memuat koleksi kursi...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Card className="max-w-md mx-4">
-          <CardContent className="pt-6 text-center">
-            <p className="text-lg text-destructive mb-4">Gagal memuat produk</p>
-            <p className="text-foreground/70">Silakan coba lagi nanti atau hubungi kami untuk bantuan.</p>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
+  const chairs = getProductsByCategory('kursi');
 
   return (
     <div className="bg-background py-12 sm:py-16 lg:py-20">

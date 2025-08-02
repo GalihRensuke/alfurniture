@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -10,7 +9,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Nama harus minimal 2 karakter"),
@@ -22,7 +20,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
-  const queryClient = useQueryClient();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -33,30 +31,19 @@ const Contact = () => {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Pesan berhasil dikirim!",
-        description: "Terima kasih telah menghubungi kami. Kami akan segera menghubungi Anda kembali.",
-      });
-      form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contact"] });
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Gagal mengirim pesan",
-        description: error.message || "Silakan coba lagi nanti.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: ContactFormData) => {
-    contactMutation.mutate(data);
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
+    // Simulate form submission delay
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    toast({
+      title: "Pesan berhasil dikirim!",
+      description: "Terima kasih telah menghubungi kami. Kami akan segera menghubungi Anda kembali melalui email atau telepon.",
+    });
+    
+    form.reset();
+    setIsSubmitting(false);
   };
 
   return (
@@ -139,10 +126,10 @@ const Contact = () => {
                   />
                   <Button
                     type="submit"
-                    disabled={contactMutation.isPending}
+                    disabled={isSubmitting}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 text-lg shadow-lg hover:shadow-xl"
                   >
-                    {contactMutation.isPending ? "Mengirim..." : "Kirim Pesan"}
+                    {isSubmitting ? "Mengirim..." : "Kirim Pesan"}
                   </Button>
                 </form>
               </Form>

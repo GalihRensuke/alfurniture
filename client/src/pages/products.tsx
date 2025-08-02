@@ -1,38 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import ProductCard from "@/components/product-card";
+import { mockProducts } from "@/lib/mockData";
 import type { Product } from "@shared/schema";
 
 const Products = () => {
-  const { data: products, isLoading, error } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
-  });
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-lg text-foreground/70">Memuat furnitur berkualitas kami...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Card className="max-w-md mx-4">
-          <CardContent className="pt-6 text-center">
-            <p className="text-lg text-destructive mb-4">Gagal memuat produk</p>
-            <p className="text-foreground/70">Silakan coba lagi nanti atau hubungi kami untuk bantuan.</p>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
+  const products: Product[] = mockProducts;
 
   return (
     <div className="bg-background py-12 sm:py-16 lg:py-20">
